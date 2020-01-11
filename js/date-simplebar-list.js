@@ -7204,8 +7204,8 @@ var List=function(t){function e(n){if(r[n])return r[n].exports;var i=r[n]={i:n,l
 
 var janelaPopUp = new Object();
 janelaPopUp.abre = function(id, classes, titulo, corpo, functionCancelar, functionEnviar, textoCancelar, textoEnviar){
-    var cancelar = (textoCancelar !== undefined)? textoCancelar: 'Cancel';
-    var enviar = (textoEnviar !== undefined)? textoEnviar: 'Send';
+    var cancelar = (textoCancelar !== undefined)? textoCancelar: '';
+    var enviar = (textoEnviar !== undefined)? textoEnviar: 'Okay';
     classes += ' ';
     var classArray = classes.split(' ');
     classes = '';

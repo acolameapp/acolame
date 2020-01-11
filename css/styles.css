@@ -99,7 +99,7 @@
     -moz-box-sizing: border-box;
     margin: 0;
     padding: 10px;
-    width: 50%;
+    width: 100%;
     border: 1px none #ccc;
     color: #fff;
     font-family: inherit;
@@ -110,10 +110,6 @@
 }
 .popUp .puCancelar{
     float: left;
-}
-
-.popUp .puEnviar{
-    float: right;
 }
 
 .p{
@@ -156,6 +152,7 @@
     margin: 5px 0;
 }
 .puCancelar{
+    display: none;
     margin: 5px 0;
 }
 
