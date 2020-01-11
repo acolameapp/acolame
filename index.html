@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1HWW28TDBK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1HWW28TDBK');
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>acola.me | Acola a tus amigos, consigue copiloto o reúne dinero para el combustible. Comparte tu viaje en acola.me</title>
+    <meta property="og:site_name" content="acola.me" />
+    <meta property="og:image" content="https://acola.me/images/logo-01.png" />
+	<meta property="og:title" content="acola.me | Acola a tus amigos, consigue copiloto o reúne dinero para el combustible. Comparte tu viaje en acola.me" />
+	<meta property="og:description" content="Deja de buscar un aventón en los lugares equivocados, comparte y busca viajes compartidos en acola.me"/>
+	<meta name="description" content="Deja de buscar un aventón en los lugares equivocados, comparte y busca viajes compartidos en acola.me"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/date-fa.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <meta name="theme-color" content="#043941">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
+
+    <!-- fallback for no js -->
+    <noscript>
+        <style>
+            [data-simplebar] {
+                overflow: auto;
+            }
+            [data-aos] {
+                opacity: 1 !important;
+                transform: translate(0) scale(1) !important;
+            }
+            #preloader {
+                display: none;
+            }
+        </style>
+    </noscript>
+</head>
+<body>
+    <div class="st-hover"></div>
+    <div class="sticky-social">
+        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&sdk=joey&u=https%3A%2F%2Facola.me%2F&display=popup&ref=plugin&src=share_button">
+            <div class="st-wrapper">
+                <div class="st-fb">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </div>
+                <div class="st-share">Compartir</div>
+            </div>
+        </a>
+        <div class="st-arrow">
+            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div id="preloader">
+        <div class="sbl-circ-dual"></div>
+    </div> 
+    <div class="root">
+        <!--Start of hero and navigation section-->
+        <section class="heronav">
+            <div class="main-header">
+                <div class="center-header">
+                    <a href="/">
+                        <img src="images/logo.svg" alt="logo">
+                        <h1>acola.me</h1>
+                    </a>
+                    <div id="nav-icon3">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a class="current-menu-item" href="/">Inicio</a></li>
+                            <li><a href="/acercade.html">Acerca De</a></li>
+                            <li><a href="/contact.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>    
+            </div>
+            <div class="hero">
+                
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="hero-text">
+                                <p>Quieres compartir tus asientos?
+                                    <span style="color: #6c63ff">acola.me</span> te ayuda
+                                </p>
+                                <a href="#app">Comenzar</a>
+                            </div>
+                            <div class="hero-img">
+                                <img src="images/hero.svg" alt="hero image">
+                            </div>
+                        </div>
+                        <div class="swiper-slide sl2">
+                            <div class="hero-text">
+                                <p>No te arriesgues a sufrir un accidente
+                                    <span style="color: #6c63ff">Consulta el estado de las vías</span>
+                                </p>
+                                <a href="#tablelist">Comenzar</a>
+                            </div>
+                            <div class="hero-img">
+                                <img src="images/towing.svg" alt="hero image">
+                            </div>
+                        </div>
+                        ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                </div>
+
+                
+            </div>
+
+        </section>
+        <!--End of hero and navigation section-->
+
+        <!--Start of app section-->
+        <section class="app-section" id="app">
+            <div class="app-container" id="users">
+                <div class="app-search">
+                        <p class="p1">Busca tu viaje compartido y presiona en el ícono de redes sociales para contactar a tu acole</p>
+                        <form autocomplete="off">
+                                <input id="origin" class="filter" type="text" placeholder="Origen"/>
+                                <input id="destination"  class="filter" type="text" placeholder="Destino"/>
+                                <span class="sort" role="button" data-sort="date-month">Ordenar por fecha de salida</span>
+                                <i class="fa fa-refresh" aria-hidden="true" onclick="refresh()"></i>
+                        </form>
+                        <p class="p2">Busca tu viaje compartido y presiona en el ícono de redes sociales para contactar a tu acole</p>
+                        <div class="separator2"></div>
+                        
+                        <p class="p1">Añade el viaje que quieres compartir</p>
+                        <div class="form">
+                            <!-- start of form2-->
+                            <form class="contact-form" novalidate="novalidate" id="posts-form">
+            
+                                <input class="sb-input" placeholder="Nombre Completo" id="name">
+                
+                                <div class="travelselect">
+                
+                                <select id ="origin-form" class="sb-input" size="1">
+                    
+                                    <option value="origen">Origen</option> 
+                
+                                    <option value = "Ambato">Ambato</option>
+                                    <option value = "Archidona">Archidona</option>
+                                    <option value = "Atacames">Atacames</option>
+                                    <option value = "Babahoyo">Babahoyo</option>
+                                    <option value = "Coca">Coca</option>
+                                    <option value = "Cuenca">Cuenca</option>
+                                    <option value = "Durán">Durán</option>
+                                    <option value = "Esmeraldas">Esmeraldas</option>
+                                    <option value = "Guayaquil">Guayaquil</option>
+                                    <option value = "Ibarra">Ibarra</option>
+                                    <option value = "Lago Agrio">Lago Agrio</option>
+                                    <option value = "Loja">Loja</option>
+                                    <option value = "Macas">Macas</option>
+                                    <option value = "Machala">Machala</option>
+                                    <option value = "Manabí">Manabí</option>
+                                    <option value = "Manta">Manta</option>
+                                    <option value = "Nueva Loja">Nueva Loja</option>
+                                    <option value = "Otavalo">Otavalo</option>
+                                    <option value = "Portoviejo">Portoviejo</option>
+                                    <option value = "Puyo">Puyo</option>
+                                    <option value = "Quito">Quito</option>
+                                    <option value = "Riobamba">Riobamba</option>
+                                    <option value = "Santa Elena">Santa Elena</option>
+                                    <option value = "Santo Domingo">Santo Domingo</option>
+                                    <option value = "Shushufundi">Shushufundi</option>
+                                    <option value = "Tena">Tena</option>
+                                    <option value = "Zamora">Zamora</option>
+                
+                                </select>
+                
+                                <select class="sb-input" id ="destination-form" size="1">
+                    
+                                    <option value="destino">Destino</option> 
+                    
+                                    <option value = "Ambato">Ambato</option>
+                                    <option value = "Archidona">Archidona</option>
+                                    <option value = "Atacames">Atacames</option>
+                                    <option value = "Babahoyo">Babahoyo</option>
+                                    <option value = "Coca">Coca</option>
+                                    <option value = "Cuenca">Cuenca</option>
+                                    <option value = "Durán">Durán</option>
+                                    <option value = "Esmeraldas">Esmeraldas</option>
+                                    <option value = "Guayaquil">Guayaquil</option>
+                                    <option value = "Ibarra">Ibarra</option>
+                                    <option value = "Lago Agrio">Lago Agrio</option>
+                                    <option value = "Loja">Loja</option>
+                                    <option value = "Macas">Macas</option>
+                                    <option value = "Machala">Machala</option>
+                                    <option value = "Manabí">Manabí</option>
+                                    <option value = "Manta">Manta</option>
+                                    <option value = "Nueva Loja">Nueva Loja</option>
+                                    <option value = "Otavalo">Otavalo</option>
+                                    <option value = "Portoviejo">Portoviejo</option>
+                                    <option value = "Puyo">Puyo</option>
+                                    <option value = "Quito">Quito</option>
+                                    <option value = "Riobamba">Riobamba</option>
+                                    <option value = "Santa Elena">Santa Elena</option>
+                                    <option value = "Santo Domingo">Santo Domingo</option>
+                                    <option value = "Shushufundi">Shushufundi</option>
+                                    <option value = "Tena">Tena</option>
+                                    <option value = "Zamora">Zamora</option>
+                            
+                                </select>
+                    
+                                </div>
+                
+                                <input class="sb-input" type="tel" placeholder="Whatsapp" id="whatsapp">
+                    
+                                <input class="sb-input" id="fb" placeholder="Link de Facebook">
+                
+                                <input class="sb-input"  placeholder="Asientos" id="seats">
+                
+                                <div class="centerdate">
+                
+                                <input class="sb-input" id="password" type="text" placeholder="Clave">
+                
+                
+                                <a class="c-btn c-datepicker-btn">
+                                        
+                                    <span class="material-icon">Fecha y Hora <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    </span>
+                                    <pre id="output"></pre>         
+                                </a>
+                                
+                                </div>                   
+                                <textarea class="sb-input" placeholder="Mensaje..." id="description"></textarea>
+                                <div class="btn1" style="text-align: center;">
+                                    <input value="Agregar Viaje" type="button" id="submit1" onclick="sendForm()">
+                                </div>
+                            </form>
+                              <!-- end of form -->
+                        </div>
+                        <p class="p2">Añade el viaje que quieres compartir</p>
+
+                </div>
+                
+                <div class="app-posts" data-simplebar data-simplebar-auto-hide="false">
+                    <ul class="list" id="posts-content">
+                 <!------------------------Posts-------------->
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        <!--End of app section-->
+        <!-- Start of roads table section -->
+        <section class="table-section" id="tablelist">
+            <h1>Vigila el estado de las vías <span>en tiempo real!</span></h1>
+            <div class="separator"></div>
+            <h2>Nuestra base de datos está conectada directamente con el ECU 911</h2>
+            <div id="search-cont">
+                <input class="search" placeholder="Buscar por Provincia" /><i class="fa fa-search" aria-hidden="true"></i>
+
+            </div>
+            <div class="thead">
+                <div class="tname">Provincia</div>
+                <div class="troad">Vía</div>
+                <div class="tstate">Estado</div>
+                <div class="tinfo">Descripción</div>
+            </div>
+            <div class="table-container" id="tableVias">
+                
+
+            </div>
+        </section>
+        <!-- End of roads table section -->
+        
+    <footer>
+        <div>
+            
+            <div class="full-width"></div>
+            <p>Copyright © 2020 by ACOLA.ME</p>
+        </div>
+    </footer>
+    </div>
+    <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
+
+    <script src="js/date-simplebar-list.js"></script>
+    <script src="js/custom.js"></script>
+    
+    
+    
+    <script>
+
+            const picker = new MaterialDatePicker({})
+              .on('submit', (d) => {
+                output.innerText = d;
+              });
+        
+            const el = document.querySelector('.c-datepicker-btn');
+            el.addEventListener('click', () => {
+              picker.open({
+                format: 'dd/MM/YY'
+              });
+            }, false);
+        
+    </script>
+    <script>
+        refresh();
+        function sendForm(){
+            var name = $('#name').val();
+            var origin = $('#origin-form option:selected').val();
+            var destination = $('#destination-form option:selected').val();
+            var whatsapp = $('#whatsapp').val();
+            var facebook = $('#fb').val();
+            var seats = $('#seats').val();
+            var password = $('#password').val();
+            var date = $('#output').html();
+            var description = $('#description').val();
+            $.post('https://gallant-williams-d1c77b.netlify.com/.netlify/functions/index',{
+                name:name,
+                origin:origin,
+                destination:destination,
+                whatsapp:whatsapp,
+                facebook:facebook,
+                seats:seats,
+                password:password,
+                date:date,
+                description:description
+            },
+            function (msg) {
+                console.log(msg)
+                if(msg==="ok"){
+                    // alert("Su post ha sido enviado con éxito");
+                    janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Su post ha sido enviado con exito!');
+                    refresh();
+                    document.getElementById('posts-form').reset();
+                    location.hash = "#" + "app";
+                }
+                else{
+                    // alert("Por favor llene todos los datos y verifique que sean correctos");
+                    janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Por favor llene todos los datos y verifique que sean correctos');
+                }
+            });  
+            
+        }
+
+        function deletePost(uri){
+            var key = prompt("Para borrar debe ingresar la clave del post")
+            if (key == null || key == "") {}
+            else{
+                $.post("https://gallant-williams-d1c77b.netlify.com/.netlify/functions/index/delete",{
+                uri:uri,
+                key:key
+                },
+                function (msg) {
+                    if(msg==="ok"){
+                        alert("Su post se ha eliminado con éxito")
+                        refresh();
+                    }
+                    else{
+                    alert("Clave incorrecta")
+                    }
+                });     
+            }
+        }
+
+        function refresh(){
+            $("i.fa-refresh").toggleClass("refresh-active");
+            $.get("https://gallant-williams-d1c77b.netlify.com/.netlify/functions/index/posts",
+            function(data){
+                document.getElementById("posts-content").innerHTML=data.toString();
+                var max=0;
+                var className = document.querySelectorAll('.date-month');
+
+                for(let i = 0; i < className.length; i++) {
+                    var attributeaux = document.querySelectorAll('.date-month')[i].innerText;
+                    attributeaux = attributeaux.substring(3, 5)+"-"+attributeaux.substring(0, 2)+"-"+attributeaux.substring(6, 10);
+                    let dateValueaux  = Date.parse(attributeaux)/1000;
+                    if(dateValueaux>max) max=dateValueaux;
+                }
+
+                console.log(max)
+                function monthDate(param) {
+                    let dateValue  = Date.parse(param)/1000;
+                    return -(dateValue-max);
+                }
+
+                for(let i = 0; i < className.length; i++) {
+                    var attribute = document.querySelectorAll('.date-month')[i].innerText;
+                    attribute = attribute.substring(3, 5)+"-"+attribute.substring(0, 2)+"-"+attribute.substring(6, 10);
+                    document.querySelectorAll('.date-month')[i].setAttribute('data-timestamp', monthDate(attribute));
+                }
+
+                var options = {
+                    valueNames: [ 'origin', 'destination' ]
+                };
+                
+                var options2 = {
+                    valueNames: [ { name: 'date-month', attr: 'data-timestamp' } ]
+                };
+
+                var posts = new List('users', options);
+                var posts2 = new List('users', options2);
+
+                $(".filter").keyup(function(){
+                    posts.filter(item => {
+                    return options.valueNames.every(name => {
+                        var value = $("#"+name).val().toLowerCase();
+                        return item.values()[name].toLowerCase().includes(value)
+                    });
+                    });
+                });
+                setTimeout(function () {
+                    $("i.fa-refresh").toggleClass("refresh-active");
+                    console.log('done');
+                }, 1200);
+            });
+        }
+        function getVias(){
+            $.get("https://gallant-williams-d1c77b.netlify.com/.netlify/functions/index/vias",
+            function(data){
+                document.getElementById('tableVias').innerHTML=data.split('*').join('<').split('$').join('>');
+                var options3 = {
+                    valueNames: [ 'name' ]
+                };  
+                var userList = new List('tablelist', options3);
+
+            });
+        }
+        getVias();
+            
+        /*(function(){
+            refresh()
+            setTimeout(arguments.callee, 15000);
+        })();*/
+    </script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+          // Optional parameters
+          direction: 'vertical',
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: true,
+            },
+      
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination',
+          }
+        })
+        </script>
+    <!-- Google schema markup -->
+    <script type="aplication/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Store",
+            "image": "https://acola.me/images/logo-01.png",
+            "name": "acola.me",
+            "email": "info@acola.me",
+            "telephone": "(+593) 998-775-709",
+            "url": "Https://acola.me"
+        }
+    </script>
+</body>
+</html>
