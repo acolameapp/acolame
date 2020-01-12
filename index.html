@@ -322,7 +322,7 @@
             var password = $('#password').val();
             var date = $('#output').html();
             var description = $('#description').val();
-            $.post('https://gallant-williams-d1c77b.netlify.com/.netlify/functions/index',{
+            $.post("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index",{
                 name:name,
                 origin:origin,
                 destination:destination,
@@ -354,7 +354,7 @@
             var key = prompt("Para borrar debe ingresar la clave del post")
             if (key == null || key == "") {}
             else{
-                $.post("https://gallant-williams-d1c77b.netlify.com/.netlify/functions/index/delete",{
+                $.post("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/delete",{
                 uri:uri,
                 key:key
                 },
@@ -372,7 +372,7 @@
 
         function refresh(){
             $("i.fa-refresh").toggleClass("refresh-active");
-            $.get("https://gallant-williams-d1c77b.netlify.com/.netlify/functions/index/posts",
+            $.get("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/posts",
             function(data){
                 document.getElementById("posts-content").innerHTML=data.toString();
                 var max=0;
@@ -423,7 +423,7 @@
             });
         }
         function getVias(){
-            $.get("https://gallant-williams-d1c77b.netlify.com/.netlify/functions/index/vias",
+            $.get("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/vias",
             function(data){
                 document.getElementById('tableVias').innerHTML=data.split('*').join('<').split('$').join('>');
                 var options3 = {
