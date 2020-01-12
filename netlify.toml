@@ -6,4 +6,8 @@ to = "/index.html"
 from = "/.netlify/functions/index"
 to = "/index.html"
 
+[[redirects]]
+from = "/index"
+to = "/index.html"
+
 
