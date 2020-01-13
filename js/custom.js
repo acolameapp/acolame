@@ -50,8 +50,11 @@ $(document).ready(function(){
         $('.tb-passengers').toggleClass('active');
         $('#users').toggleClass('inactive');
         $('#users2').toggleClass('inactive');
+        $("#to-from").trigger('reset');
+        refresh();
       } else {
-
+        $("#to-from").trigger('reset');
+        refresh();
       }
 
   });
@@ -63,6 +66,8 @@ $(document).ready(function(){
       $('.tb-drivers').toggleClass('active');
       $('#users2').toggleClass('inactive');
       $('#users').toggleClass('inactive');
+      $("#to-from").trigger('reset');
+      refresh();
     } else {
       
     }
