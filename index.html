@@ -130,14 +130,14 @@
         <section class="app-section" id="app">
             <div class="app-container">
                 <div class="app-search">
-                        <p class="p1"><strong>Busca</strong> tu viaje compartido y usa las redes sociales para contactar a tu acole</p>
-                        <form id="to-from" autocomplete="off">
+                        <p class="p1"><strong>Busca</strong> tu viaje compartido y presiona en el ícono de redes sociales para contactar a tu acole</p>
+                        <form autocomplete="off">
                                 <input id="origin" class="filter" type="text" placeholder="Origen"/>
                                 <input id="destination"  class="filter" type="text" placeholder="Destino"/>
                                 <span class="sort" role="button" data-sort="date-month">Ordenar por fecha de salida</span>
                                 <i class="fa fa-refresh" aria-hidden="true" onclick="refresh()"></i>
                         </form>
-                        <p class="p2"><strong>Busca</strong> tu viaje compartido y usa las redes sociales para contactar a tu acole</p>
+                        <p class="p2"><strong>Busca</strong> tu viaje compartido y presiona en el ícono de redes sociales para contactar a tu acole</p>
                         <div class="separator2"></div>
                         
                         <p class="p1"><strong>Añade</strong> el viaje que quieres compartir</p>
@@ -148,9 +148,7 @@
                                 <input class="sb-input" placeholder="Nombre Completo" id="name">
 
                                 <select id="ride-type" class="sb-input2" size="1">
-
                                     <option value="tipo">Yo soy</option>
-
                                     <option value="Conductor">Conductor</option>
                                     <option value="Pasajero">Pasajero</option>
                                 </select>
@@ -258,9 +256,9 @@
                 </div>
                 
                 <div class="app-posts">
-                    <p class="p-lf">Estoy en busca de:</p>
-                    <button class="tab tb-drivers active">Conductores</button>
-                    <button class="tab tb-passengers">Pasajeros</button>
+                    <p class="p-lf">Buscando por:</p>
+                    <button class="tab tb-drivers active" id="btnconductores" onclick="btnconductores()">Conductores</button>
+                    <button class="tab tb-passengers" id="btnpasajeros" onclick="btnpasajeros()">Pasajeros</button>
                     <div class="sbar-wrapper" data-simplebar data-simplebar-auto-hide="false">
                         <div  id="users">
                             <ul class="list list-drivers" id="posts-content">
@@ -268,8 +266,7 @@
                             </ul>
                         </div>
                         <div id="users2" class="inactive">
-                            <ul class="list list-passengers" id="posts-content">
-                                <li>                            <span class="exit" onclick="deletePost('-LyVYEE4bD33u1Oclm0C')"><i class="fa fa-times" aria-hidden="true"></i></span>                            <div class="title-list"><h3>Alexandro Tapia </h3><h2>13-01-2020</h2></div>                            <p>Lugar de origen: <span class="origin">Guayaquil</span></p>                            <p>Lugar de destino: <span class="destination">Atacames</span></p>                            <p>Fecha de salida: <span class="date-month timestamp" data-timestamp="172800">29-01-20</span></p>                            <p>Hora de salida: <span>15:00</span></p>                            <p>Asientos: <span>7</span></p>                            <p>Redes sociales: <a href="https://m.me/alexandro" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></p>                            <p class="comment">Bbdbdbbs                            </p>                        </li><li>                            <span class="exit" onclick="deletePost('-LyVY9ZZJxkYGqFtFipc')"><i class="fa fa-times" aria-hidden="true"></i></span>                            <div class="title-list"><h3>Alex </h3><h2>13-01-2020</h2></div>                            <p>Lugar de origen: <span class="origin">Esmeraldas</span></p>                            <p>Lugar de destino: <span class="destination">Tena</span></p>                            <p>Fecha de salida: <span class="date-month timestamp" data-timestamp="1555200">13-01-20</span></p>                            <p>Hora de salida: <span>15:00</span></p>                            <p>Asientos: <span>3</span></p>                            <p>Redes sociales: <a href="https://www.facebook.com/Andres" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://wa.me/593996705431" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></p>                            <p class="comment">verga                            </p>                        </li><li>                            <span class="exit" onclick="deletePost('-LyVXty5XZMd4apedTd_')"><i class="fa fa-times" aria-hidden="true"></i></span>                            <div class="title-list"><h3>Guido Guevara </h3><h2>13-01-2020</h2></div>                            <p>Lugar de origen: <span class="origin">Esmeraldas</span></p>                            <p>Lugar de destino: <span class="destination">Esmeraldas</span></p>                            <p>Fecha de salida: <span class="date-month timestamp" data-timestamp="259200">28-01-20</span></p>                            <p>Hora de salida: <span>15:00</span></p>                            <p>Asientos: <span>dfg</span></p>                            <p>Redes sociales: <a href="https://m.me/Andres" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></p>                            <p class="comment">Hhhhb                            </p>                        </li><li>                            <span class="exit" onclick="deletePost('-LyVXDOD6gFUtJP5GDLD')"><i class="fa fa-times" aria-hidden="true"></i></span>                            <div class="title-list"><h3>julio </h3><h2>13-01-2020</h2></div>                            <p>Lugar de origen: <span class="origin">Coca</span></p>                            <p>Lugar de destino: <span class="destination">Tena</span></p>                            <p>Fecha de salida: <span class="date-month timestamp" data-timestamp="1555200">13-01-20</span></p>                            <p>Hora de salida: <span>15:00</span></p>                            <p>Asientos: <span>3</span></p>                            <p>Redes sociales: <a href="https://www.facebook.com/guido.guevararueda" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://wa.me/593996705431" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></p>                            <p class="comment">qwe                            </p>                        </li><li>                            <span class="exit" onclick="deletePost('-LyVXCVo_ktYDcLYe_o9')"><i class="fa fa-times" aria-hidden="true"></i></span>                            <div class="title-list"><h3>Alexandro Tapia </h3><h2>13-01-2020</h2></div>                            <p>Lugar de origen: <span class="origin">Coca</span></p>                            <p>Lugar de destino: <span class="destination">Esmeraldas</span></p>                            <p>Fecha de salida: <span class="date-month timestamp" data-timestamp="0">31-01-20</span></p>                            <p>Hora de salida: <span>15:00</span></p>                            <p>Asientos: <span>3</span></p>                            <p>Redes sociales: <a href="https://m.me/andres" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://wa.me/593968574321" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></p>                            <p class="comment">Yshs hs                            </p>                        </li><li>                            <span class="exit" onclick="deletePost('-LyVWrmFpIh7unWKVvq7')"><i class="fa fa-times" aria-hidden="true"></i></span>                            <div class="title-list"><h3>Maria </h3><h2>13-01-2020</h2></div>                            <p>Lugar de origen: <span class="origin">Coca</span></p>                            <p>Lugar de destino: <span class="destination">Quito</span></p>                            <p>Fecha de salida: <span class="date-month timestamp" data-timestamp="1555200">13-01-20</span></p>                            <p>Hora de salida: <span>15:00</span></p>                            <p>Asientos: <span>3</span></p>                            <p>Redes sociales: <a href="https://www.facebook.com/guido.guevararueda" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://wa.me/593996705431" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></p>                            <p class="comment">qwe                            </p>                        </li><li>                            <span class="exit" onclick="deletePost('-LyUwvYy4qvOnh9PThkI')"><i class="fa fa-times" aria-hidden="true"></i></span>                            <div class="title-list"><h3>Carlos Coronel </h3><h2>13-01-2020</h2></div>                            <p>Lugar de origen: <span class="origin">Coca</span></p>                            <p>Lugar de destino: <span class="destination">Quito</span></p>                            <p>Fecha de salida: <span class="date-month timestamp" data-timestamp="691200">23-01-20</span></p>                            <p>Hora de salida: <span>00:00</span></p>                            <p>Asientos: <span>2</span></p>                            <p>Redes sociales: <a href="https://m.me/guido.guevararueda" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://wa.me/593996705431" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></p>                            <p class="comment">Solo busco un copiloto, contacto por fb                            </p>                        </li><li>                            <span class="exit" onclick="deletePost('-LyUwkRsSkhyxbYMmKfo')"><i class="fa fa-times" aria-hidden="true"></i></span>                            <div class="title-list"><h3>Fernando Castaño </h3><h2>13-01-2020</h2></div>                            <p>Lugar de origen: <span class="origin">Ambato</span></p>                            <p>Lugar de destino: <span class="destination">Quito</span></p>                            <p>Fecha de salida: <span class="date-month timestamp" data-timestamp="1555200">13-01-20</span></p>                            <p>Hora de salida: <span>00:00</span></p>                            <p>Asientos: <span>3</span></p>                            <p>Redes sociales: <a href="https://m.me/guido.guevararueda" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a><a href="https://wa.me/593996705431" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></p>                            <p class="comment">Acolar con la gasolina                            </p>                        </li>
+                            <ul class="list list-passengers" id="users-content">
                             </ul>
                         </div>
                     </div>
@@ -343,7 +340,19 @@
             var password = $('#password').val();
             var date = $('#output').html();
             var description = $('#description').val();
-            $.post("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index",{
+            var urlpost=""
+            var ride = $('#ride-type option:selected').val();
+            if(ride==="Conductor"){
+                urlpost="https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index";
+            }
+            else if(ride==="Pasajero"){
+                urlpost="https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/pasajeros";
+            }
+            else{
+                alert("Seleccione su  rol en el viaje (Conductor o pasajero)");
+                return;
+            }
+            $.post(urlpost,{
                 name:name,
                 origin:origin,
                 destination:destination,
@@ -450,6 +459,65 @@
                     $("i.fa-refresh").toggleClass("refresh-active");
                 }, 1200);
             });
+
+            $.get("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/pasajeros",
+            function(data){
+                document.getElementById("users-content").innerHTML=data.toString();
+                var max=0;
+                var className = document.querySelectorAll('.date-month');
+
+                for(let i = 0; i < className.length; i++) {
+                    var attributeaux = document.querySelectorAll('.date-month')[i].innerText;
+                    attributeaux = attributeaux.substring(3, 5)+"-"+attributeaux.substring(0, 2)+"-"+attributeaux.substring(6, 10);
+                    let dateValueaux  = Date.parse(attributeaux)/1000;
+                    if(dateValueaux>max) max=dateValueaux;
+                }
+
+                console.log(max)
+                function monthDate(param) {
+                    let dateValue  = Date.parse(param)/1000;
+                    return -(dateValue-max);
+                }
+
+                for(let i = 0; i < className.length; i++) {
+                    var attribute = document.querySelectorAll('.date-month')[i].innerText;
+                    attribute = attribute.substring(3, 5)+"-"+attribute.substring(0, 2)+"-"+attribute.substring(6, 10);
+                    document.querySelectorAll('.date-month')[i].setAttribute('data-timestamp', monthDate(attribute));
+                }
+
+                var options = {
+                    valueNames: [ 'origin', 'destination' ]
+                };
+                
+                var options2 = {
+                    valueNames: [ { name: 'date-month', attr: 'data-timestamp' } ]
+                };
+
+                var posts = new List('users', options);
+                var posts3 = new List('users2', options);
+                var posts2 = new List('users', options2);
+
+                $(".filter").keyup(function(){
+                    posts.filter(item => {
+                    return options.valueNames.every(name => {
+                        var value = $("#"+name).val().toLowerCase();
+                        return item.values()[name].toLowerCase().includes(value)
+                    });
+                    });
+                    posts3.filter(item => {
+                    return options.valueNames.every(name => {
+                        var value = $("#"+name).val().toLowerCase();
+                        return item.values()[name].toLowerCase().includes(value)
+                    });
+                    });
+                    
+                    
+                });
+                setTimeout(function () {
+                    $("i.fa-refresh").toggleClass("refresh-active");
+                }, 1200);
+            });
+
         }
         function getVias(){
             $.get("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/vias",
