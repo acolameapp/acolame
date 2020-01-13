@@ -1607,6 +1607,22 @@ body {
     border-radius: 20px;
 }
 
+.sb-input2 {
+    font-family: Lato;
+    width: 70%;
+    margin-bottom: 12px;
+    background: none;
+    font-size: 1em;
+    color: #464646;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.sb-input2::placeholder {
+    color: #464646;
+}
+
 .tab {
     font-family: Lato;
     padding: 5px 10px;
@@ -1668,14 +1684,14 @@ body {
     width: 90%;
     height: 2px;
     background: #2856bb;
-    margin: 20px auto;
+    margin: 15px auto;
 
 }
 
 .filter,
 .sb-input {
     width: 70%;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     background: none;
     font-size: 1em;
     font-family: Proxima Nova;
