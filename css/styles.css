@@ -1613,14 +1613,15 @@ body {
     margin-bottom: 12px;
     background: none;
     font-size: 1em;
-    color: #464646;
+    color: black;
     background: white;
     border-radius: 20px;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    border: none;
 }
 
 .sb-input2::placeholder {
-    color: #464646;
+    color: black;
 }
 
 .tab {
@@ -1708,7 +1709,7 @@ body {
     padding: 1px 6px;
     width: 125px;
     letter-spacing: -0.03em;
-    color: #464646;
+    color: black;
     background: white;
     border-radius: 20px;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -1840,7 +1841,7 @@ input#password {
         display: unset;
     }
     .app-posts {
-        height: 510px;
+        height: 100%;
         margin-top: 10px;
     }
     .app-section {
