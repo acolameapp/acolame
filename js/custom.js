@@ -6,6 +6,44 @@ $(document).ready(function(){
     $('.main-nav ul li').toggleClass('active');
   });
 
+  /*checkbox fix*/
+  $(document).on('click', '.c-datepicker--show-time', function()
+  {
+    if ($(this).is(':checked')) {
+      $('.c-datepicker__calendar').hide()
+      $('.c-datepicker__clock').show()
+      if ( !$('.c-clock').hasClass('toggle-active') ) {
+        $('.c-clock').toggleClass('toggle-inactive');
+        $('.c-clock').toggleClass('toggle-active');
+        $('.c-calendar').toggleClass('toggle-active');
+        $('.c-calendar').toggleClass('toggle-inactive');
+      } else {
+      }
+      
+    } else {
+      
+    }
+  });
+
+  $(document).on('click', '.c-datepicker--show-calendar', function()
+  {
+    if ($(this).is(':checked')) {
+      $('.c-datepicker__clock').hide();
+      $('.c-datepicker__calendar').show();
+      if ( !$('.c-calendar').hasClass('toggle-active') ) {
+        $('.c-calendar').toggleClass('toggle-inactive');
+        $('.c-calendar').toggleClass('toggle-active');
+        $('.c-clock').toggleClass('toggle-active');
+        $('.c-clock').toggleClass('toggle-inactive');
+      } else {
+
+      }
+    } else {
+      
+    }
+  });
+  
+
   //setInterval(function() {console.log(intBool)}, 500);
   setInterval(function() {}, 500);
   var intBool = false;

@@ -91,10 +91,59 @@
   .c-datepicker__next:after {
     content: 'chevron_right'; }
   
-  .c-datepicker--show-time:after {
-    content: 'access_time';
-    color: white;
+  .c-datepicker--show-time:after,
+  .c-clock:after {
+    content: '\f017';
+    font-family: fontAwesome;
+    color: transparent;
     visibility: visible; }
+  
+  .c-clock:after {
+    content: '\f017';
+    font-family: fontAwesome;
+    color: white;
+    font-size: 1.5em;
+    margin-left: -20px;
+    opacity: 0.5;
+    visibility: visible; } 
+
+    .toggle-active:after {
+      opacity: 1 !important;
+    }
+
+    .toggle-inactive:after {
+      opacity: 0.5 !important;
+    }
+
+    .c-calendar {
+      position: absolute;
+      top: 170px;
+      left: 10px;
+      z-index: 999;
+      width: 23px;
+    }
+
+    .c-calendar:after {
+      content: '\f073';
+      font-family: fontAwesome;
+      color: white;
+      font-size: 1.5em;
+      margin-right: -20px;
+      opacity: 1;
+      visibility: visible; }
+
+    .c-datepicker--show-time,
+    .c-datepicker--show-calendar {
+      top: 0 !important;
+    }
+
+  .c-clock {
+    position: absolute;
+    top: 170px;
+    right: 10px;
+    z-index: 999;
+    width: 23px;
+  }
   
   .c-datepicker--show-calendar:after {
     content: 'grid_on';
@@ -209,8 +258,7 @@
   .c-datepicker__toggle {
     top: 170px;
     width: 23px;
-    visibility: hidden;
-    opacity: 0.5;
+    opacity: 0;
     z-index: 1;
     transition: opacity 200ms ease-in-out; }
   
@@ -221,13 +269,13 @@
     left: 10px; }
   
   .c-datepicker__toggle:checked {
-    opacity: 1; }
+    opacity: 0; }
   
-  .c-datepicker--show-time:checked ~ .c-datepicker__calendar {
-    display: none; }
+  /* .c-datepicker--show-time:checked ~ .c-datepicker__calendar {
+    display: none; } */
   
-  .c-datepicker--show-calendar:checked ~ .c-datepicker__clock {
-    display: none; }
+  /* .c-datepicker--show-calendar:checked ~ .c-datepicker__clock {
+    display: none; } */
   
   .c-datepicker__clock {
     position: relative;
@@ -241,6 +289,7 @@
     font-size: 14px;
     line-height: 36px;
     padding: 160px 0 20px 0;
+    display: none;
     margin: 0 auto;
     position: relative; }
     .c-datepicker__clock .c-datepicker__clock__num {
@@ -495,7 +544,9 @@
         z-index: -1;
         background: rgba(0, 0, 0, 0.05); }
   
-  /*# sourceMappingURL=datepicker.css.map */
+        input[type=checkbox] {
+          -moz-appearance:initial;
+        }
   
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
