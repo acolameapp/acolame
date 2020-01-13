@@ -329,15 +329,6 @@
         
     </script>
     <script>
-        var sel=1;
-        function btnconductores(){
-            sel=1;
-            console.log(sel)
-        }
-        function btnpasajeros(){
-            sel=0;
-            console.log(sel)
-        }
         refresh();
         function sendForm(){
             var name = $('#name').val();
@@ -350,11 +341,16 @@
             var date = $('#output').html();
             var description = $('#description').val();
             var urlpost=""
-            if(sel===1){
-                urlpost="https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index"
+            var ride = $('#ride-type option:selected').val();
+            if(ride==="Conductor"){
+                urlpost="https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index";
+            }
+            else if(ride==="Pasajero"){
+                urlpost="https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/pasajeros";
             }
             else{
-                urlpost="https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/pasajeros"
+                alert("Seleccione su  rol en el viaje (Conductor o pasajero)");
+                return;
             }
             $.post(urlpost,{
                 name:name,
