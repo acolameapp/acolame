@@ -45,7 +45,7 @@ $(document).ready(function(){
   
 
   //setInterval(function() {console.log(intBool)}, 500);
-  setInterval(function() {}, 500);
+  
   var intBool = false;
   
 
