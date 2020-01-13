@@ -1844,6 +1844,12 @@ input#password {
         height: 100%;
         margin-top: 10px;
     }
+    .sb-input2,
+    .sb-input,
+    .centerdate,
+    .travelselect {
+        width: 80%;
+    }
     .app-section {
         height: unset;
         max-height: unset;
