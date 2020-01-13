@@ -42,7 +42,32 @@ $(document).ready(function(){
       
     }
   });
-  
+  /*tab switching for posts*/
+  $(document).on('click', '.tb-drivers', function() {
+
+      if ( !$(this).hasClass('active') ) {
+        $('.tb-drivers').toggleClass('active');
+        $('.tb-passengers').toggleClass('active');
+        $('#users').toggleClass('inactive');
+        $('#users2').toggleClass('inactive');
+      } else {
+
+      }
+
+  });
+
+  $(document).on('click', '.tb-passengers', function() {
+
+    if ( !$(this).hasClass('active') ) {
+      $('.tb-passengers').toggleClass('active');
+      $('.tb-drivers').toggleClass('active');
+      $('#users2').toggleClass('inactive');
+      $('#users').toggleClass('inactive');
+    } else {
+      
+    }
+
+});
 
   //setInterval(function() {console.log(intBool)}, 500);
   
@@ -105,7 +130,7 @@ tippy('#whatsapp', {
 });
 
 tippy('#fb', {
-  content: "Por favor verifica que el link sea correcto eg: https://facebook.com/julio.iglesias"
+  content: "Por favor verifica que el link sea correcto eg: https://www.facebook.com/julio.iglesias"
 });
 
 	// Page loading animation

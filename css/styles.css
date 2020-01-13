@@ -1352,7 +1352,7 @@ body {
     background-size: 400% 400%;
     position: relative;
     animation: change 7s ease-in-out infinite;
-    height: 650px;
+    height: 620px;
     border-radius: 20px;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
     align-items: center;
@@ -1360,7 +1360,7 @@ body {
     display: flex;
     display: -webkit-flex;
     display: -ms-flexbox;
-    padding: 30px 20px;
+    padding: 25px 20px;
 }
 
 
@@ -1562,10 +1562,11 @@ body {
 
 .app-posts ul li h3 {
     margin: 0 10px 5px 0;
+    font-size: 1.1em;
 }
 
 .app-posts ul li h2 {
-    font-size: 1em;
+    font-size: 0.8em;
     color: #818181;
 }
 
@@ -1592,6 +1593,45 @@ body {
     width: 100%;
     color: #000;
     padding-top: 5px;
+}
+
+.app-posts .p-lf {
+    font-family: Lato;
+    color: #fff;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+
+.sbar-wrapper {
+    height: 500px;
+    border-radius: 20px;
+}
+
+.tab {
+    font-family: Lato;
+    padding: 5px 10px;
+    margin: 0 5px 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: white;
+    width: 100px;
+    border-radius: 20px;
+    transition: .4s ease;;
+}
+
+.tab:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #6c63ff;
+}
+
+.tab.active {
+    color: #6c63ff;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#users.inactive,
+#users2.inactive {
+    display: none;
 }
 
 .root .fa-facebook {
