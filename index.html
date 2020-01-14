@@ -133,6 +133,7 @@
                         <form id="to-from" autocomplete="off">
                                 <input id="origin" class="filter" type="text" placeholder="Origen"/>
                                 <input id="destination"  class="filter" type="text" placeholder="Destino"/>
+                                <input id="pname"  class="filter" type="text" placeholder="Nombre"/>
                                 
                                 <i class="fa fa-refresh" aria-hidden="true" onclick="refresh()"></i>
                         </form>
@@ -270,9 +271,9 @@
         <!--End of app section-->
         <!-- Start of roads table section -->
         <section class="table-section" id="tablelist">
-            <h1>Vigila el estado de las vías <span>en tiempo real!</span></h1>
+            <h1 class="section-h1">Vigila el estado de las vías <span>en tiempo real!</span></h1>
             <div class="separator"></div>
-            <h2>Nuestra base de datos está conectada directamente con el ECU 911</h2>
+            <h2 class="section-h2">Nuestra base de datos está conectada directamente con el ECU 911</h2>
             <div id="search-cont">
                 <input class="search" placeholder="Buscar por Provincia" /><i class="fa fa-search" aria-hidden="true"></i>
             </div>
@@ -291,9 +292,16 @@
 
         <!-- start of roads table section -->
         <section class="idreg-section">
+            <h1 class="section-h1">Consulta tus obligaciones con la <span>ANT</span></h1>
+            <div class="separator"></div>
+            <h2 class="section-h2">Información directa y confiable</h2>
             <div class="lookup">
-                <input id="cedula" type="text" placeholder="cédula"><br><button onclick="searchcedula()">Buscar</button><br>
-                <iframe id="iframecedula" frameborder="0"></iframe><br>
+                <div class="backcover">
+                    <span class="lu-span">
+                        <input id="cedula" type="text" placeholder="cédula o placa">
+                    </span>
+                </div>
+                <iframe id="iframedata" frameborder="0"></iframe>
             </div>
         </section>
         
@@ -332,15 +340,21 @@
             });
         }, false);
 
+    </script>
+    <script>
         function searchcedula(){
         var cedula=$("#cedula").val()
         console.log(cedula);
         var scrcedula="https://sistemaunico.ant.gob.ec:5038/PortalWEB/paginas/clientes/clp_grid_citaciones.jsp?ps_tipo_identificacion=CED&ps_identificacion="+cedula+"&ps_placa="
-        $("#iframecedula").attr('src', scrcedula)
+        $("#iframedata").attr('src', scrcedula)
         }
-        
-    </script>
-    <script>
+        function searchplaca(){
+            var placa=$("#cedula").val()
+            placa=placa.toUpperCase();
+            console.log(placa);
+            var scrplaca="https://sistemaunico.ant.gob.ec:5038/PortalWEB/paginas/clientes/clp_grid_citaciones.jsp?ps_tipo_identificacion=PLA&ps_identificacion="+placa+"&ps_placa="
+            $("#iframedata").attr('src', scrplaca)
+        }
         refresh();
         function sendForm(){
             var name = $('#name').val();
@@ -437,8 +451,7 @@
         }
 
         function refresh(){
-            $("i.fa-refresh").toggleClass("refresh-active");
-            console.log('ran');
+            $("i.fa-refresh").toggleClass("fa-spin");
             $.get("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/conductores",
             function(data){
                 document.getElementById("posts-content").innerHTML=data.toString();
@@ -464,7 +477,7 @@
                 }
 
                 var options = {
-                    valueNames: [ 'origin', 'destination' ]
+                    valueNames: [ 'origin', 'destination', 'pname' ]
                 };
                 
                 var options2 = {
@@ -518,7 +531,7 @@
                 }
 
                 var options = {
-                    valueNames: [ 'origin', 'destination' ]
+                    valueNames: [ 'origin', 'destination', 'pname' ]
                 };
                 
                 var options2 = {
@@ -548,7 +561,7 @@
                     
                 });
                 setTimeout(function () {
-                    $("i.fa-refresh").toggleClass("refresh-active");
+                    $("i.fa-refresh").toggleClass("fa-spin");
                 }, 1200);
             });
 

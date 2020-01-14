@@ -1127,7 +1127,7 @@ body {
     flex-direction: column;
 }
 
-.table-section h1 {
+.section-h1 {
     color: #3f3d56;
     text-align: center;
     font-size: 3em;
@@ -1198,7 +1198,7 @@ body {
     font-family: Proxima Nova;
 }
 
-.table-section h2 {
+.section-h2 {
     text-align: center;
     max-width: 700px;
     font-family: Lato;
@@ -1248,7 +1248,7 @@ body {
 }
 
 @media screen and (max-width: 950px) {
-    .table-section h1,
+    .section-h1,
     .travel-form h1 {
         font-size: 2.5em !important;
     }
@@ -1265,11 +1265,11 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-    .table-section h1,
+    .section-h1,
     .travel-form h1 {
         font-size: 2.1em !important;
     }
-    .table-section h2,
+    .section-h2,
     .travel-form h2 {
         font-size: 1.2em !important;
     }
@@ -1900,6 +1900,12 @@ input#password {
     }
 }
 
+@media screen and (max-width: 396px) {
+    .app-search a {
+        margin-bottom: 15px;
+    }
+}
+
 @media screen and (max-width: 375px) {
     .tb-drivers,
     .tb-passengers {
@@ -1918,11 +1924,23 @@ input#password {
     .app-search {
         font-size: 0.9em;
     }
+    .fa-refresh {
+        bottom: -15px;
+    }
 }
 
-@media screen and (max-width: 396px) {
-    .app-search a {
-        margin-bottom: 15px;
+@media screen and (max-width: 337px) {
+    .tb-drivers,
+    .tb-passengers {
+        width: 80px;
+        padding: 2px 2px;
+        font-size: 0.8em;
+    }
+    #sortbtn .fa {
+        font-size: 0.8em;
+    }
+    .tab {
+        padding: 2px 10px;
     }
 }
 
@@ -1953,12 +1971,7 @@ input#password {
     font-size: 1.3em;
 }
 
-.separator {
-    background: #17a2b8;
-    width: 120px;
-    height: 3px;
-    margin: 10px auto;
-}
+
 
 .travel-form .form {
     max-width: 800px;
@@ -2070,6 +2083,13 @@ footer > div {
     background: rgba(255, 255, 255, 0.517);
     height: 2px;
     width: 100%;
+}
+
+.separator {
+    background: #17a2b8;
+    width: 120px;
+    height: 3px;
+    margin: 10px auto;
 }
 
 /*styles for about section*/
@@ -2530,14 +2550,118 @@ textarea.input {
 /*id and reg section*/
 
 .idreg-section {
-    height: 100vh;
     width: 100%;
     display: flex;
     display: -webkit-flex;
     display: -ms-flexbox;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    padding: 20px 10px;
 }
+
+.idreg-section h1 {
+    color: #6c63ff;
+}
+
+.lookup {
+    max-width: 1140px;
+    width: 100%;
+    padding: 20px 10px;
+    margin: auto;
+}
+
+#iframedata {
+    width: 100%;
+    height: 500px;
+    background: #ffffff;
+    box-shadow: 41px 41px 82px #c7c7c7, 
+                -41px -41px 82px #ffffff;
+    border-radius: 20px;
+    margin: 20px 0 0 0;
+}
+
+#cedula,
+#placa {
+    border-radius: 8px;
+    background: #6c63ff;
+    color: #ffffff;
+    padding: 4px 0 4px 6px;
+    font-family: Lato;
+    font-size: 1.1em;
+    box-shadow: 0 10px 40px #6c63ff, 0 0 0 20px #ffffffeb;
+}
+
+#cedula::placeholder,
+#placa::placeholder {
+    color: #e9e9e9;
+}
+
+.backcover {
+    padding: 6px 5px;
+    width: fit-content;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.lookup button {
+    font-size: 1em;
+    background: transparent;
+    padding: 5px 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    z-index: 999;
+    color: #6c63ff;
+    border: 2px solid #6c63ff;
+    transition: .5s ease;
+}
+
+.lookup button:hover {
+    color: white;
+    background: #6c63ff;
+}
+
+.lu-span {
+    position: relative;
+}
+
+.lu-span:after {
+    position: absolute;
+    content: '\f002';
+    font-family: fontAwesome;
+    top: 0;
+    right: 8px;
+    color: white;
+    transition: .3s ease;
+}
+
+.lu-span:before {
+    position: absolute;
+    content: '\f061';
+    font-family: fontAwesome;
+    top: 0;
+    right: 8px;
+    font-size: 1.1em;
+    color: white;
+    transform: rotate(45deg);
+    transition: .3s ease;
+    opacity: 0;
+}
+
+.lu-span:hover:after {
+    transform: rotate(-45deg);
+    opacity: 0;
+}
+
+.lu-span:hover:before {
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+
+
 
 /*agrego por andrés*/
 @media screen and (max-width: 700px) {

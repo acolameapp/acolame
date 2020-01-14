@@ -53,8 +53,6 @@ $(document).ready(function(){
         $("#to-from").trigger('reset');
         refresh();
       } else {
-        $("#to-from").trigger('reset');
-        refresh();
       }
 
   });
@@ -134,6 +132,31 @@ $(document).ready(function(){
   
 
 });
+
+//on enter form input
+$( "#cedula" ).keypress(function() {
+  var keycode = (event.keyCode ? event.keyCode : event.which);
+	if(keycode == '13'){
+    if ($('#cedula').val().length == 10) {
+      searchcedula();
+    } else if ( $('#cedula').val().length == 7 ) {
+      searchplaca();
+    } else {
+
+    }
+		
+	}
+});
+
+
+$( "#cedula" ).click(function(){
+  $("#placaform").trigger('reset');
+});
+
+$( "#placa" ).click(function(){
+  $("#cedulaform").trigger('reset');
+});
+
 //tooltips for form entries
 tippy('#password', {
   content: "Esta clave te servirá si deseas eliminar tu publicación, por favor guárdala.",
