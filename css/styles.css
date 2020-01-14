@@ -1783,6 +1783,17 @@ input#password {
     background: white;
 }
 
+.sort {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    opacity: 0;
+}
+
+.tb-sortdate {
+    width: 55px;
+}
+
 .sort,
 #submit1 {
     font-size: 0.8em;

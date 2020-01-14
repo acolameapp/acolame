@@ -72,9 +72,18 @@ $(document).ready(function(){
       
     }
 
-});
+  });
 
-  //setInterval(function() {console.log(intBool)}, 500);
+  //sort date btn 
+  $('#sortbtn').click(function(){
+    if ( $('.tb-drivers').hasClass('active') ) {
+      $('#sort1').click();
+    } else {
+      $('#sort2').click();
+    }
+  });
+
+  //sticky fb share btn
   
   var intBool = false;
   
@@ -136,6 +145,10 @@ tippy('#whatsapp', {
 
 tippy('#fb', {
   content: "Por favor verifica que el link sea correcto eg: https://www.facebook.com/julio.iglesias"
+});
+
+tippy('#sortbtn', {
+  content: "Ordenar por fecha de salida"
 });
 
 	// Page loading animation
