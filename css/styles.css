@@ -1825,6 +1825,15 @@ input#password {
         height: 1200px;
         padding: 20px 20px;
     }
+    .filter,
+    .sb-input,
+    .sb-input2 {
+        padding: 2px 0;
+    }
+    .app-search a {
+        margin-bottom: 0;
+        padding: 2px 6px;
+    }
     .app-posts ul li p {
         display: flex;
         display: -webkit-flex;
@@ -1890,6 +1899,14 @@ input#password {
     }
 }
 
+@media screen and (max-width: 375px) {
+    .tb-drivers,
+    .tb-passengers {
+        width: 90px;
+        padding: 5px 5px;
+    }
+}
+
 @media screen and (max-width: 360px) {
     .app-posts {
         height: 550px;
@@ -1899,6 +1916,12 @@ input#password {
     }
     .app-search {
         font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 396px) {
+    .app-search a {
+        margin-bottom: 15px;
     }
 }
 
