@@ -66,7 +66,7 @@
             <div class="main-header">
                 <div class="center-header">
                     <a href="/index.html">
-                        <img src="images/logo.svg" alt="logo">
+                        <img data-aos="flip-left" data-aos-duration="1500" src="images/logo.svg" alt="logo">
                         <h1>acola.me</h1>
                     </a>
                     <div id="nav-icon3">
@@ -129,14 +129,14 @@
         <section class="app-section" id="app">
             <div class="app-container">
                 <div class="app-search">
-                        <p class="p1"><strong>Busca</strong> tu viaje compartido y usa las redes sociales para contactar a tu acole</p>
+                        <p class="p1"><strong>Busca</strong> tu viaje compartido.</p>
                         <form id="to-from" autocomplete="off">
                                 <input id="origin" class="filter" type="text" placeholder="Origen"/>
                                 <input id="destination"  class="filter" type="text" placeholder="Destino"/>
                                 
                                 <i class="fa fa-refresh" aria-hidden="true" onclick="refresh()"></i>
                         </form>
-                        <p class="p2"><strong>Busca</strong> tu viaje compartido y usa las redes sociales para contactar a tu acole</p>
+                        <p class="p2"><strong>Busca</strong> tu viaje compartido.</p>
                         <div class="separator2"></div>
                         
                         <p class="p1"><strong>Añade</strong> el viaje que quieres compartir</p>
@@ -282,12 +282,20 @@
                 <div class="tstate">Estado</div>
                 <div class="tinfo">Descripción</div>
             </div>
-            <div class="table-container" id="tableVias">
+            <div class="table-container" id="tableVias" data-aos="fade-up" data-aos-duration="1500">
                 
 
             </div>
         </section>
         <!-- End of roads table section -->
+
+        <!-- start of roads table section -->
+        <section class="idreg-section">
+            <div class="lookup">
+                <input id="cedula" type="text" placeholder="cédula"><br><button onclick="searchcedula()">Buscar</button><br>
+                <iframe id="iframecedula" frameborder="0"></iframe><br>
+            </div>
+        </section>
         
     <footer>
         <div>
@@ -307,18 +315,29 @@
     
     <script>
 
-            const picker = new MaterialDatePicker({})
-              .on('submit', (d) => {
-                output.innerText = d;
-              });
-        
-            const el = document.querySelector('.c-datepicker-btn');
-            el.addEventListener('click', () => {
-              picker.open({
-                format: 'dd/MM/YY'
-              });
-            }, false);
-            
+        //Initialize animation on scroll
+        AOS.init({
+        once: true, // whether animation should happen only once - while scrolling down
+        });
+
+        const picker = new MaterialDatePicker({})
+            .on('submit', (d) => {
+            output.innerText = d;
+            });
+
+        const el = document.querySelector('.c-datepicker-btn');
+        el.addEventListener('click', () => {
+            picker.open({
+            format: 'dd/MM/YY'
+            });
+        }, false);
+
+        function searchcedula(){
+        var cedula=$("#cedula").val()
+        console.log(cedula);
+        var scrcedula="https://sistemaunico.ant.gob.ec:5038/PortalWEB/paginas/clientes/clp_grid_citaciones.jsp?ps_tipo_identificacion=CED&ps_identificacion="+cedula+"&ps_placa="
+        $("#iframecedula").attr('src', scrcedula)
+        }
         
     </script>
     <script>

@@ -967,6 +967,12 @@ body {
     color: #3f3d56;
 }
 
+@media screen and (min-width: 1500px) {
+    .hero {
+        margin: 100px auto;
+    }
+}
+
 @media screen and (max-width: 1140px) {
     
     .hero {
@@ -1427,13 +1433,12 @@ body {
 }
 
 .fa-refresh {
-    color: #fff;
+    color: #6c63ff;
     font-size: 1.7em !important;
     position: absolute;
     bottom: 0;
     cursor: pointer;
     right: 10px;
-    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.8));
 }
 
 .refresh-active {
@@ -2522,6 +2527,17 @@ textarea.input {
   }
 }
 
+/*id and reg section*/
+
+.idreg-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    align-items: center;
+    justify-content: center;
+}
 
 /*agrego por andrés*/
 @media screen and (max-width: 700px) {
