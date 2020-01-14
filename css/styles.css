@@ -2627,7 +2627,7 @@ textarea.input {
     position: relative;
 }
 
-.lu-span:after {
+.lu-span .fa-search {
     position: absolute;
     content: '\f002';
     font-family: fontAwesome;
@@ -2635,9 +2635,10 @@ textarea.input {
     right: 8px;
     color: white;
     transition: .3s ease;
+    cursor: pointer;
 }
 
-.lu-span:before {
+.lu-span .fa-arrow-right {
     position: absolute;
     content: '\f061';
     font-family: fontAwesome;
@@ -2648,20 +2649,18 @@ textarea.input {
     transform: rotate(45deg);
     transition: .3s ease;
     opacity: 0;
+    cursor: pointer;
 }
 
-.lu-span:hover:after {
+.lu-span:hover .fa-search {
     transform: rotate(-45deg);
     opacity: 0;
 }
 
-.lu-span:hover:before {
+.lu-span:hover .fa-arrow-right {
     transform: rotate(0deg);
     opacity: 1;
 }
-
-
-
 
 /*agrego por andrés*/
 @media screen and (max-width: 700px) {

@@ -148,6 +148,16 @@ $( "#cedula" ).keypress(function() {
 	}
 });
 
+$('.fa-arrow-right').click(function() {
+  if ($('#cedula').val().length == 10) {
+    searchcedula();
+  } else if ( $('#cedula').val().length == 7 ) {
+    searchplaca();
+  } else {
+
+  }
+});
+
 
 $( "#cedula" ).click(function(){
   $("#placaform").trigger('reset');
