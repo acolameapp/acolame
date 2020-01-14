@@ -113,7 +113,6 @@
                                 <img src="images/towing.svg" alt="hero image">
                             </div>
                         </div>
-                        ...
                     </div>
                     <!-- If we need pagination -->
                     <div class="swiper-pagination"></div>
@@ -556,16 +555,16 @@
     <script>
         var mySwiper = new Swiper ('.swiper-container', {
           loop: true,
-          autoplay: {
-            delay: 2500,
-            disableOnInteraction: true,
-            },
+        //   autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: true,
+        //     },
       
           // If we need pagination
           pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-pagination'
           }
-        })
+        });
         </script>
     <!-- Google schema markup -->
     <script type="aplication/ld+json">
