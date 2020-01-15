@@ -139,7 +139,7 @@ $( "#cedula" ).keypress(function() {
 	if(keycode == '13'){
     if ($('#cedula').val().length == 10) {
       searchcedula();
-    } else if ( $('#cedula').val().length == 7 ) {
+    } else if ( $('#cedula').val().length == 7 || $('#cedula').val().length == 6 ) {
       searchplaca();
     } else {
 
@@ -151,21 +151,13 @@ $( "#cedula" ).keypress(function() {
 $('.fa-arrow-right').click(function() {
   if ($('#cedula').val().length == 10) {
     searchcedula();
-  } else if ( $('#cedula').val().length == 7 ) {
+  } else if ( $('#cedula').val().length == 7 || $('#cedula').val().length == 6 ) {
     searchplaca();
   } else {
 
   }
 });
 
-
-$( "#cedula" ).click(function(){
-  $("#placaform").trigger('reset');
-});
-
-$( "#placa" ).click(function(){
-  $("#cedulaform").trigger('reset');
-});
 
 //tooltips for form entries
 tippy('#password', {
