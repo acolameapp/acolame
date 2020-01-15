@@ -2580,6 +2580,17 @@ textarea.input {
                 -41px -41px 82px #ffffff;
     border-radius: 20px;
     margin: 20px 0 0 0;
+    background: url('/images/logobg.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 640px) {
+    #iframedata {
+        background: url('/images/logobgm.svg');
+        background-size: cover;
+        background-position: center;    
+    }
 }
 
 #cedula,
