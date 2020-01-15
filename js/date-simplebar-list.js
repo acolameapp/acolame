@@ -7204,7 +7204,8 @@ var List=function(t){function e(n){if(r[n])return r[n].exports;var i=r[n]={i:n,l
 
 var janelaPopUp = new Object();
 
-janelaPopUp.prompt = function(id, classes, titulo, corpo, functionCancelar, functionEnviar, textoCancelar, textoEnviar){
+janelaPopUp.prompt = function(id, classes, titulo, corpo, functionCancelar, functionEnviar, textoCancelar, textoEnviar,uri){
+  console.log(uri)
   var cancelar = (textoCancelar !== undefined)? textoCancelar: '';
   var enviar = (textoEnviar !== undefined)? textoEnviar: 'Okay';
   classes += ' ';
@@ -7219,21 +7220,26 @@ janelaPopUp.prompt = function(id, classes, titulo, corpo, functionCancelar, func
           default : classes += this + ' '; break;
       }
   });
+
   var popFundo = '<div id="popFundo_' + id + '" class="popUpFundo ' + classesFundo + '"></div>'
-  var janela = '<div id="' + id + '" class="popUp ' + classes + '"><h1>' + titulo + "</h1><div><span>" + corpo + "</span><input id='pass' type=text placeholder='clave'></div><button class='puCancelar " + classBot + "' id='" + id +"_cancelar' data-parent=" + id + ">" + cancelar + "</button><button onclick='deleteConductores()' class='puEnviar " + classBot + "' data-parent=" + id + " id='" + id +"_enviar'>" + enviar + "</button></div>";
+  var janela = '<div id="' + id + '" class="popUp ' + classes + '"><h1>' + titulo + "</h1><div><span>" + corpo + "</span><input id='pass' type=text placeholder='clave'></div><button class='puCancelar " + classBot + "' id='" + id +"_cancelar' data-parent=" + id + ">" + cancelar + "</button><button onclick=\"deleteConductoresFunc('"+uri+"')\" class='puEnviar " + classBot + "' data-parent=" + id + " id='" + id +"_enviar'>" + enviar + "</button></div>";
   $("window, body").css('overflow', 'hidden');
-  
+
+
   $("body").append(popFundo);
+
   $("body").append(janela);
+
   $("body").append(popFundo);
-   //alert(janela);
+
+  //alert(janela);
   $("#popFundo_" + id).fadeIn("fast");
   $("#" + id).addClass("popUpEntrada");
   
   $("#" + id + '_cancelar').on("click", function(){
       if((functionCancelar !== undefined) && (functionCancelar !== '')){
           functionCancelar();
-          
+
       }else{
           janelaPopUp.fecha(id);
       }
@@ -7241,6 +7247,7 @@ janelaPopUp.prompt = function(id, classes, titulo, corpo, functionCancelar, func
   $("#" + id + '_enviar').on("click", function(){
       if((functionEnviar !== undefined) && (functionEnviar !== '')){
           functionEnviar();
+
       }else{
           janelaPopUp.fecha(id);
       }

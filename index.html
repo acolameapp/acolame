@@ -423,7 +423,15 @@
         }
 
         function deleteConductores(uri){
-            var key = prompt("Para borrar debe ingresar la clave del post")
+            janelaPopUp.prompt( "aviso", 'p white',  'acola.me' ,  'Ingrese la clave para borrar el post',"","","","Enviar",uri);
+        }
+
+        function deletePasajeros(uri){
+            janelaPopUp.prompt( "aviso", 'p white',  'acola.me' ,  'Ingrese la clave para borrar el post',"","","","Enviar",uri);
+        }
+
+        function deleteConductoresFunc(uri){
+            key=$("#pass").val();
             if (key == null || key == "") {}
             else{
                 $.post("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/deleteConductores",{
@@ -433,7 +441,7 @@
                 function (msg) {
                     if(msg==="ok"){
                         // alert("Su post se ha eliminado con éxito")
-                        janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Su post se ha eliminado exitosamente');
+                    janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Su post se ha eliminado exitosamente');
                         refresh();
                     }
                     else{
@@ -442,10 +450,6 @@
                     }
                 });     
             }
-        }
-
-        function deletePasajeros(uri){
-            var key = prompt("Para borrar debe ingresar la clave del post")
             if (key == null || key == "") {}
             else{
                 $.post("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/deletePasajeros",{
@@ -455,12 +459,12 @@
                 function (msg) {
                     if(msg==="ok"){
                         // alert("Su post se ha eliminado con éxito")
-                        janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Su post se ha eliminado exitosamente');
+                    janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Su post se ha eliminado exitosamente');
                         refresh();
                     }
                     else{
                     // alert("Clave incorrecta")
-                    janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Clave incorrecta!');
+                        janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Clave incorrecta!');
                     }
                 });     
             }
