@@ -7206,7 +7206,7 @@ var janelaPopUp = new Object();
 
 janelaPopUp.prompt = function(id, classes, titulo, corpo, functionCancelar, functionEnviar, textoCancelar, textoEnviar,uri){
   console.log(uri)
-  var cancelar = (textoCancelar !== undefined)? textoCancelar: '';
+  var cancelar = (textoCancelar !== undefined)? textoCancelar: 'Cancelar';
   var enviar = (textoEnviar !== undefined)? textoEnviar: 'Okay';
   classes += ' ';
   var classArray = classes.split(' ');
@@ -7222,7 +7222,7 @@ janelaPopUp.prompt = function(id, classes, titulo, corpo, functionCancelar, func
   });
 
   var popFundo = '<div id="popFundo_' + id + '" class="popUpFundo ' + classesFundo + '"></div>'
-  var janela = '<div id="' + id + '" class="popUp ' + classes + '"><h1>' + titulo + "</h1><div><span>" + corpo + "</span><input id='pass' type=text placeholder='clave'></div><button class='puCancelar " + classBot + "' id='" + id +"_cancelar' data-parent=" + id + ">" + cancelar + "</button><button onclick=\"deleteConductoresFunc('"+uri+"')\" class='puEnviar " + classBot + "' data-parent=" + id + " id='" + id +"_enviar'>" + enviar + "</button></div>";
+  var janela = '<div id="' + id + '" class="popUp customprompt ' + classes + '"><h1>' + titulo + "</h1><div><span class='customspan'>" + corpo + "</span><input id='pass' type=text placeholder='clave'></div><button class='puCancelar customcancel " + classBot + "' id='" + id +"_cancelar' data-parent=" + id + ">Cancelar</button><button onclick=\"deleteConductoresFunc('"+uri+"')\" class='puEnviar customsend " + classBot + "' data-parent=" + id + " id='" + id +"_enviar'>" + enviar + "</button></div>";
   $("window, body").css('overflow', 'hidden');
 
 

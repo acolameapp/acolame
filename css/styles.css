@@ -261,6 +261,23 @@ color: #000;
     background-color:#555;
 }
 
+.customsend {
+    width: 50% !important;
+}
+
+.customcancel {
+    display: unset !important;
+    width: 50% !important;
+}
+
+.customspan {
+    height: 80px !important;
+}
+
+#pass {
+    border: 1px solid grey;
+    margin: 8px 0;
+}
 
 /*swiper*/
 .swiper-slide {
