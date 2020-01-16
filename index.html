@@ -444,11 +444,14 @@
                         setTimeout(function() {
                             janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Su post se ha eliminado exitosamente');
                             refresh();
-                        },1000)
+                        },1000);
                     }
                     else{
                     // alert("Clave incorrecta")
-                    janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Clave incorrecta!');
+                        setTimeout(function() {
+                            janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Clave incorrecta!');
+                            refresh();
+                        },1000);
                     }
                 });     
             }
@@ -461,12 +464,17 @@
                 function (msg) {
                     if(msg==="ok"){
                         // alert("Su post se ha eliminado con éxito")
-                    janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Su post se ha eliminado exitosamente');
-                        refresh();
+                        setTimeout(function() {
+                            janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Su post se ha eliminado exitosamente');
+                            refresh();
+                        },1000);
                     }
                     else{
                     // alert("Clave incorrecta")
-                        janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Clave incorrecta!');
+                        setTimeout(function() {
+                            janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Clave incorrecta!');
+                            refresh();
+                        },1000);
                     }
                 });     
             }
