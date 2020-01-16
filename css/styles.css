@@ -1435,7 +1435,6 @@ body {
 .app-search {
     width: 30%;
     height: 100%;
-    min-width: 304px;
     border-radius: 20px;
     background: white;
     border-right: 1px solid rgba(255, 255, 255, 0.3);
@@ -1726,7 +1725,7 @@ body {
 }
 
 .app-search a {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 1em;
     font-family: Lato;
     padding: 1px 6px;
@@ -1777,15 +1776,22 @@ input#password {
 }
 
 #output {
-    position: absolute;
-    bottom: 0;
-    left: 100%;
+    padding: 0 6px;
+    z-index: 999;
     font-size: 1em;
 }
 
 .centerdate,
 .travelselect {
     width: 70%;
+}
+
+.centerdate {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    margin-bottom: 5px;
 }
 
 .travelselect select {
@@ -1850,7 +1856,7 @@ input#password {
         padding: 2px 0;
     }
     .app-search a {
-        margin-bottom: 0;
+        margin-bottom: 10px;
         padding: 2px 6px;
     }
     .app-posts ul li p {
@@ -1915,6 +1921,12 @@ input#password {
     .travel-form h2 {
         padding: 0 10px ;
         margin: 20px 0 !important;
+    }
+    .app-search #to-from {
+        height: 145px;
+    }
+    .app-container {
+        height: 1248px;
     }
 }
 

@@ -66,7 +66,7 @@
             <div class="main-header">
                 <div class="center-header">
                     <a href="/index.html">
-                        <img data-aos="flip-left" data-aos-duration="1500" src="images/logo.svg" alt="logo">
+                        <img src="images/logo.svg" alt="logo">
                         <h1>acola.me</h1>
                     </a>
                     <div id="nav-icon3">
@@ -245,9 +245,9 @@
                                 <a class="c-btn c-datepicker-btn">
                                         
                                     <span class="material-icon">Fecha y Hora <i class="fa fa-calendar" aria-hidden="true"></i>
-                                    </span>
-                                    <pre id="output"></pre>         
-                                </a>                                
+                                    </span>    
+                                </a>       
+                                <pre id="output"></pre>                              
                                 </div>                   
                                 <textarea class="sb-input" placeholder="Mensaje..." id="description"></textarea>
                                 <div class="btn1" style="text-align: center;">
@@ -297,7 +297,7 @@
                 <div class="tstate">Estado</div>
                 <div class="tinfo">Descripción</div>
             </div>
-            <div class="table-container" id="tableVias" data-aos="fade-up" data-aos-duration="1500">
+            <div class="table-container" id="tableVias">
                 
 
             </div>
@@ -338,11 +338,6 @@
     
     
     <script>
-
-        //Initialize animation on scroll
-        AOS.init({
-        once: true, // whether animation should happen only once - while scrolling down
-        });
 
         const picker = new MaterialDatePicker({})
             .on('submit', (d) => {
