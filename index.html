@@ -380,10 +380,10 @@
             var urlpost=""
             var ride = $('#ride-type option:selected').val();
             if(ride==="Conductor"){
-                urlpost="https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/conductores";
+                urlpost="https://zealous-snyder-fe1913.netlify.app/.netlify/functions/index/conductores";
             }
             else if(ride==="Pasajero"){
-                urlpost="https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/pasajeros";
+                urlpost="https://zealous-snyder-fe1913.netlify.app/.netlify/functions/index/pasajeros";
             }
             else{
                 janelaPopUp.abre( "aviso", 'p white',  'acola.me' ,  'Seleccione su rol en el viaje (pasajero, conductor)');
@@ -429,7 +429,7 @@
             key=$("#pass").val();
             if (key == null || key == "") {}
             else{
-                $.post("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/deleteConductores",{
+                $.post("https://zealous-snyder-fe1913.netlify.app/.netlify/functions/index/deleteConductores",{
                 uri:uri,
                 key:key
                 },
@@ -452,7 +452,7 @@
             }
             if (key == null || key == "") {}
             else{
-                $.post("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/deletePasajeros",{
+                $.post("https://zealous-snyder-fe1913.netlify.app/.netlify/functions/index/deletePasajeros",{
                 uri:uri,
                 key:key
                 },
@@ -477,7 +477,7 @@
 
         function refresh(){
             $("i.fa-refresh").toggleClass("fa-spin");
-            $.get("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/conductores",
+            $.get("https://zealous-snyder-fe1913.netlify.app/.netlify/functions/index/conductores",
             function(data){
                 document.getElementById("posts-content").innerHTML=data.toString();
                 var max=0;
@@ -532,7 +532,7 @@
                 });
             });
 
-            $.get("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/pasajeros",
+            $.get("https://zealous-snyder-fe1913.netlify.app/.netlify/functions/index/pasajeros",
             function(data){
                 document.getElementById("users-content").innerHTML=data.toString();
                 var max=0;
@@ -592,7 +592,7 @@
 
         }
         function getVias(){
-            $.get("https://zealous-snyder-fe1913.netlify.com/.netlify/functions/index/vias",
+            $.get("https://zealous-snyder-fe1913.netlify.app/.netlify/functions/index/vias",
             function(data){
                 document.getElementById('tableVias').innerHTML=data.split('*').join('<').split('$').join('>');
                 var options3 = {
